@@ -1,0 +1,333 @@
+{
+  "asr_results": {
+    "clean": {
+      "wer": 6.47,
+      "noise_type": "none",
+      "snr_db": "inf"
+    },
+    "white_snr5": {
+      "wer": 9.68,
+      "noise_type": "white",
+      "snr_db": 5
+    },
+    "white_snr10": {
+      "wer": 13.74,
+      "noise_type": "white",
+      "snr_db": 10
+    },
+    "white_snr15": {
+      "wer": 8.88,
+      "noise_type": "white",
+      "snr_db": 15
+    },
+    "white_snr20": {
+      "wer": 8.72,
+      "noise_type": "white",
+      "snr_db": 20
+    },
+    "white_snr30": {
+      "wer": 7.43,
+      "noise_type": "white",
+      "snr_db": 30
+    },
+    "pink_snr5": {
+      "wer": 9.95,
+      "noise_type": "pink",
+      "snr_db": 5
+    },
+    "pink_snr10": {
+      "wer": 10.21,
+      "noise_type": "pink",
+      "snr_db": 10
+    },
+    "pink_snr15": {
+      "wer": 9.57,
+      "noise_type": "pink",
+      "snr_db": 15
+    },
+    "pink_snr20": {
+      "wer": 9.04,
+      "noise_type": "pink",
+      "snr_db": 20
+    },
+    "pink_snr30": {
+      "wer": 7.27,
+      "noise_type": "pink",
+      "snr_db": 30
+    },
+    "babble_snr5": {
+      "wer": 10.75,
+      "noise_type": "babble",
+      "snr_db": 5
+    },
+    "babble_snr10": {
+      "wer": 9.89,
+      "noise_type": "babble",
+      "snr_db": 10
+    },
+    "babble_snr15": {
+      "wer": 10.32,
+      "noise_type": "babble",
+      "snr_db": 15
+    },
+    "babble_snr20": {
+      "wer": 9.79,
+      "noise_type": "babble",
+      "snr_db": 20
+    },
+    "babble_snr30": {
+      "wer": 7.97,
+      "noise_type": "babble",
+      "snr_db": 30
+    },
+    "traffic_snr5": {
+      "wer": 11.28,
+      "noise_type": "traffic",
+      "snr_db": 5
+    },
+    "traffic_snr10": {
+      "wer": 9.04,
+      "noise_type": "traffic",
+      "snr_db": 10
+    },
+    "traffic_snr15": {
+      "wer": 11.12,
+      "noise_type": "traffic",
+      "snr_db": 15
+    },
+    "traffic_snr20": {
+      "wer": 7.49,
+      "noise_type": "traffic",
+      "snr_db": 20
+    },
+    "traffic_snr30": {
+      "wer": 6.63,
+      "noise_type": "traffic",
+      "snr_db": 30
+    }
+  },
+  "coupling_analysis": {
+    "clean": {
+      "wer": 6.47,
+      "noise_type": "none",
+      "snr_db": "inf",
+      "coupling_triggered": true,
+      "ondevice_llm_feasible": false,
+      "routing_decision": "must_use_cloud_llm"
+    },
+    "white_snr5": {
+      "wer": 9.68,
+      "noise_type": "white",
+      "snr_db": 5,
+      "coupling_triggered": true,
+      "ondevice_llm_feasible": false,
+      "routing_decision": "must_use_cloud_llm"
+    },
+    "white_snr10": {
+      "wer": 13.74,
+      "noise_type": "white",
+      "snr_db": 10,
+      "coupling_triggered": true,
+      "ondevice_llm_feasible": false,
+      "routing_decision": "must_use_cloud_llm"
+    },
+    "white_snr15": {
+      "wer": 8.88,
+      "noise_type": "white",
+      "snr_db": 15,
+      "coupling_triggered": true,
+      "ondevice_llm_feasible": false,
+      "routing_decision": "must_use_cloud_llm"
+    },
+    "white_snr20": {
+      "wer": 8.72,
+      "noise_type": "white",
+      "snr_db": 20,
+      "coupling_triggered": true,
+      "ondevice_llm_feasible": false,
+      "routing_decision": "must_use_cloud_llm"
+    },
+    "white_snr30": {
+      "wer": 7.43,
+      "noise_type": "white",
+      "snr_db": 30,
+      "coupling_triggered": true,
+      "ondevice_llm_feasible": false,
+      "routing_decision": "must_use_cloud_llm"
+    },
+    "pink_snr5": {
+      "wer": 9.95,
+      "noise_type": "pink",
+      "snr_db": 5,
+      "coupling_triggered": true,
+      "ondevice_llm_feasible": false,
+      "routing_decision": "must_use_cloud_llm"
+    },
+    "pink_snr10": {
+      "wer": 10.21,
+      "noise_type": "pink",
+      "snr_db": 10,
+      "coupling_triggered": true,
+      "ondevice_llm_feasible": false,
+      "routing_decision": "must_use_cloud_llm"
+    },
+    "pink_snr15": {
+      "wer": 9.57,
+      "noise_type": "pink",
+      "snr_db": 15,
+      "coupling_triggered": true,
+      "ondevice_llm_feasible": false,
+      "routing_decision": "must_use_cloud_llm"
+    },
+    "pink_snr20": {
+      "wer": 9.04,
+      "noise_type": "pink",
+      "snr_db": 20,
+      "coupling_triggered": true,
+      "ondevice_llm_feasible": false,
+      "routing_decision": "must_use_cloud_llm"
+    },
+    "pink_snr30": {
+      "wer": 7.27,
+      "noise_type": "pink",
+      "snr_db": 30,
+      "coupling_triggered": true,
+      "ondevice_llm_feasible": false,
+      "routing_decision": "must_use_cloud_llm"
+    },
+    "babble_snr5": {
+      "wer": 10.75,
+      "noise_type": "babble",
+      "snr_db": 5,
+      "coupling_triggered": true,
+      "ondevice_llm_feasible": false,
+      "routing_decision": "must_use_cloud_llm"
+    },
+    "babble_snr10": {
+      "wer": 9.89,
+      "noise_type": "babble",
+      "snr_db": 10,
+      "coupling_triggered": true,
+      "ondevice_llm_feasible": false,
+      "routing_decision": "must_use_cloud_llm"
+    },
+    "babble_snr15": {
+      "wer": 10.32,
+      "noise_type": "babble",
+      "snr_db": 15,
+      "coupling_triggered": true,
+      "ondevice_llm_feasible": false,
+      "routing_decision": "must_use_cloud_llm"
+    },
+    "babble_snr20": {
+      "wer": 9.79,
+      "noise_type": "babble",
+      "snr_db": 20,
+      "coupling_triggered": true,
+      "ondevice_llm_feasible": false,
+      "routing_decision": "must_use_cloud_llm"
+    },
+    "babble_snr30": {
+      "wer": 7.97,
+      "noise_type": "babble",
+      "snr_db": 30,
+      "coupling_triggered": true,
+      "ondevice_llm_feasible": false,
+      "routing_decision": "must_use_cloud_llm"
+    },
+    "traffic_snr5": {
+      "wer": 11.28,
+      "noise_type": "traffic",
+      "snr_db": 5,
+      "coupling_triggered": true,
+      "ondevice_llm_feasible": false,
+      "routing_decision": "must_use_cloud_llm"
+    },
+    "traffic_snr10": {
+      "wer": 9.04,
+      "noise_type": "traffic",
+      "snr_db": 10,
+      "coupling_triggered": true,
+      "ondevice_llm_feasible": false,
+      "routing_decision": "must_use_cloud_llm"
+    },
+    "traffic_snr15": {
+      "wer": 11.12,
+      "noise_type": "traffic",
+      "snr_db": 15,
+      "coupling_triggered": true,
+      "ondevice_llm_feasible": false,
+      "routing_decision": "must_use_cloud_llm"
+    },
+    "traffic_snr20": {
+      "wer": 7.49,
+      "noise_type": "traffic",
+      "snr_db": 20,
+      "coupling_triggered": true,
+      "ondevice_llm_feasible": false,
+      "routing_decision": "must_use_cloud_llm"
+    },
+    "traffic_snr30": {
+      "wer": 6.63,
+      "noise_type": "traffic",
+      "snr_db": 30,
+      "coupling_triggered": true,
+      "ondevice_llm_feasible": false,
+      "routing_decision": "must_use_cloud_llm"
+    }
+  },
+  "llm_quality_under_noise": {
+    "clean": {
+      "condition": "clean",
+      "asr_wer": 6.47,
+      "avg_response_length_words": 79.8,
+      "error_rate": 0.0,
+      "n_samples": 20
+    },
+    "white_snr20": {
+      "condition": "white_snr20",
+      "asr_wer": 8.72,
+      "avg_response_length_words": 80.7,
+      "error_rate": 0.0,
+      "n_samples": 20
+    },
+    "white_snr10": {
+      "condition": "white_snr10",
+      "asr_wer": 13.74,
+      "avg_response_length_words": 76.4,
+      "error_rate": 0.0,
+      "n_samples": 20
+    },
+    "babble_snr15": {
+      "condition": "babble_snr15",
+      "asr_wer": 10.32,
+      "avg_response_length_words": 79.1,
+      "error_rate": 0.0,
+      "n_samples": 20
+    },
+    "traffic_snr10": {
+      "condition": "traffic_snr10",
+      "asr_wer": 9.04,
+      "avg_response_length_words": 80.7,
+      "error_rate": 0.0,
+      "n_samples": 20
+    }
+  },
+  "summary": {
+    "total_conditions": 21,
+    "conditions_triggering_coupling": 21,
+    "noise_types": [
+      "white",
+      "pink",
+      "babble",
+      "traffic"
+    ],
+    "snr_levels": [
+      5,
+      10,
+      15,
+      20,
+      30
+    ]
+  }
+}

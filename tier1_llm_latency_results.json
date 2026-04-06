@@ -1,0 +1,182 @@
+{
+  "llama3.1:8b_short": {
+    "model": "llama3.1:8b",
+    "context": "short",
+    "context_description": "Short (50 tokens)",
+    "num_predict": 50,
+    "n_measurements": 100,
+    "total_latency_ms": {
+      "mean": 551.72,
+      "std": 70.44,
+      "median": 576.87,
+      "p95": 605.78,
+      "p99": 612.48,
+      "min": 339.01,
+      "max": 614.75
+    },
+    "time_to_first_token_ms": {
+      "mean": 7.45,
+      "std": 2.55,
+      "median": 6.61
+    },
+    "tokens_per_second": {
+      "mean": 157.67,
+      "std": 1.74,
+      "median": 157.15
+    },
+    "output_tokens": {
+      "mean": 45.9,
+      "std": 9.68
+    }
+  },
+  "llama3.1:8b_medium": {
+    "model": "llama3.1:8b",
+    "context": "medium",
+    "context_description": "Medium (300 tokens)",
+    "num_predict": 300,
+    "n_measurements": 50,
+    "total_latency_ms": {
+      "mean": 2241.54,
+      "std": 300.39,
+      "median": 2389.78,
+      "p95": 2413.01,
+      "p99": 2426.19,
+      "min": 1611.02,
+      "max": 2428.77
+    },
+    "time_to_first_token_ms": {
+      "mean": 9.41,
+      "std": 3.75,
+      "median": 8.52
+    },
+    "tokens_per_second": {
+      "mean": 153.85,
+      "std": 0.55,
+      "median": 153.66
+    },
+    "output_tokens": {
+      "mean": 279.52,
+      "std": 41.11
+    }
+  },
+  "llama3.1:8b_long": {
+    "model": "llama3.1:8b",
+    "context": "long",
+    "context_description": "Long (800 tokens)",
+    "num_predict": 800,
+    "n_measurements": 30,
+    "total_latency_ms": {
+      "mean": 5604.46,
+      "std": 576.71,
+      "median": 5961.43,
+      "p95": 6018.53,
+      "p99": 6031.08,
+      "min": 4708.78,
+      "max": 6034.02
+    },
+    "time_to_first_token_ms": {
+      "mean": 12.04,
+      "std": 10.41,
+      "median": 8.53
+    },
+    "tokens_per_second": {
+      "mean": 151.74,
+      "std": 0.23,
+      "median": 151.66
+    },
+    "output_tokens": {
+      "mean": 747.5,
+      "std": 80.2
+    }
+  },
+  "gemma2:2b_short": {
+    "model": "gemma2:2b",
+    "context": "short",
+    "context_description": "Short (50 tokens)",
+    "num_predict": 50,
+    "n_measurements": 100,
+    "total_latency_ms": {
+      "mean": 452.28,
+      "std": 54.85,
+      "median": 480.17,
+      "p95": 498.86,
+      "p99": 511.55,
+      "min": 316.09,
+      "max": 516.29
+    },
+    "time_to_first_token_ms": {
+      "mean": 4.83,
+      "std": 1.66,
+      "median": 4.27
+    },
+    "tokens_per_second": {
+      "mean": 245.54,
+      "std": 4.98,
+      "median": 245.59
+    },
+    "output_tokens": {
+      "mean": 43.38,
+      "std": 10.09
+    }
+  },
+  "gemma2:2b_medium": {
+    "model": "gemma2:2b",
+    "context": "medium",
+    "context_description": "Medium (300 tokens)",
+    "num_predict": 300,
+    "n_measurements": 50,
+    "total_latency_ms": {
+      "mean": 1822.94,
+      "std": 120.22,
+      "median": 1875.08,
+      "p95": 1909.88,
+      "p99": 1921.75,
+      "min": 1476.14,
+      "max": 1923.77
+    },
+    "time_to_first_token_ms": {
+      "mean": 6.83,
+      "std": 1.73,
+      "median": 6.25
+    },
+    "tokens_per_second": {
+      "mean": 239.58,
+      "std": 0.43,
+      "median": 239.59
+    },
+    "output_tokens": {
+      "mean": 289.0,
+      "std": 22.16
+    }
+  },
+  "gemma2:2b_long": {
+    "model": "gemma2:2b",
+    "context": "long",
+    "context_description": "Long (800 tokens)",
+    "num_predict": 800,
+    "n_measurements": 30,
+    "total_latency_ms": {
+      "mean": 4430.18,
+      "std": 438.05,
+      "median": 4712.75,
+      "p95": 4745.05,
+      "p99": 4783.99,
+      "min": 3752.64,
+      "max": 4796.41
+    },
+    "time_to_first_token_ms": {
+      "mean": 7.56,
+      "std": 4.06,
+      "median": 6.19
+    },
+    "tokens_per_second": {
+      "mean": 234.56,
+      "std": 0.58,
+      "median": 234.37
+    },
+    "output_tokens": {
+      "mean": 747.97,
+      "std": 79.19
+    }
+  }
+}

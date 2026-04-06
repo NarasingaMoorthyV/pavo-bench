@@ -1,0 +1,18 @@
+{
+  "dataset": "PAVO-Bench 50K",
+  "total_samples": 50000,
+  "train_samples": 40000,
+  "test_samples": 10000,
+  "generation_time_hours": 10.270227825376722,
+  "resumed_from": 30000,
+  "new_samples_generated": 20000,
+  "error_count": 0,
+  "error_rate": 0.0,
+  "complexity_distribution": {
+    "1": 0.25,
+    "2": 0.3,
+    "3": 0.25,
+    "4": 0.15,
+    "5": 0.05
+  }
+}

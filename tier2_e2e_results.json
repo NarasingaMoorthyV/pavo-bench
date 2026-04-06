@@ -1,0 +1,133 @@
+{
+  "cloud_premium": {
+    "config": {
+      "asr": "whisper-large-v3",
+      "llm": "llama3.1:8b",
+      "description": "High-quality cloud pipeline"
+    },
+    "n_samples": 200,
+    "e2e_latency_ms": {
+      "mean": 1152.75,
+      "std": 398.27,
+      "median": 1083.1,
+      "p95": 1619.78,
+      "p99": 1822.54
+    },
+    "asr_latency_ms": {
+      "mean": 438.66,
+      "std": 313.3
+    },
+    "llm_latency_ms": {
+      "mean": 514.09,
+      "std": 215.03
+    },
+    "sample_asr_outputs": [
+      "concord returned to its place amidst the tents",
+      "the english forwarded to the french baskets of flowers of which they had made a plentiful provision to greet the arrival of the young princess the french in return invited the english to a supper which was to be given the next day",
+      "congratulations were poured in upon the princess everywhere during her journey",
+      "from the respect paid her on all sides she seemed like a queen and from the adoration with which she was treated by two or three she appeared an object of worship  the queen-mother gave the french the most affectionate reception france was her native country and she had suffered too much unhappiness in england for england to have made her forget france",
+      "she taught her daughter then by her own affection for it that love for a country where they had both been hospitably received and where a brilliant future opened for them"
+    ],
+    "sample_llm_responses": [
+      "It sounds like Concord has returned home or back to its usual location among other tents. Is there anything else I can help with?",
+      "It seems like a friendly gesture between the English and French, with each side showing hospitality towards the other as they welcome the young princess.",
+      "It sounds like the princess was receiving a lot of admiration and well-wishes from people along the way!",
+      "The passage suggests that Marie Antoinette is treated with great respect and adoration by those around her, but also implies that this may be due to her royal status rather than genuine affection. Additionally, it highlights the queen's strong connection to France, which she considers her native country, in contrast to England where she experienced unhappiness.",
+      "It seems like the mother is teaching her daughter to appreciate their new home and the opportunities available to them there, likely due to the kindness and hospitality they've experienced in this foreign country."
+    ]
+  },
+  "ondevice_fast": {
+    "config": {
+      "asr": "whisper-tiny",
+      "llm": "gemma2:2b",
+      "description": "Fast on-device pipeline"
+    },
+    "n_samples": 200,
+    "e2e_latency_ms": {
+      "mean": 993.19,
+      "std": 215.62,
+      "median": 923.0,
+      "p95": 1449.05,
+      "p99": 1586.59
+    },
+    "asr_latency_ms": {
+      "mean": 181.1,
+      "std": 72.64
+    },
+    "llm_latency_ms": {
+      "mean": 462.1,
+      "std": 197.32
+    },
+    "sample_asr_outputs": [
+      "Concord returned to its place amidst the tents.",
+      "The English forwarded to the French baskets of flowers, of which they had made a plantable  provision to greet the arrival of the young princess.  The French in return invited the English to a supper, which was to be given the next day.",
+      "Congratulations, report in upon the Princess Everywhere, during her journey.",
+      "from the respect paid her on all sides, she seemed like a queen, and from the  adoration with which she was treated by two or three, she appeared in object of worship.  The queen mother gave the French the most affectionate reception. France was her native  country, and she had suffered too much unhappiness in England for England to have made her  forget France.",
+      "She taught her daughter, then, by her own affection for it, that love for a country where  they had both been hospitably received and where a brilliant future opened for them."
+    ],
+    "sample_llm_responses": [
+      "Concord has been placed back in the camp/tents.",
+      "The English gave the French baskets of flowers as a gift for the princess's arrival. In return, the French hosted an evening meal for the English the following day.",
+      "Please provide me with more context!  I need to know what kind of \"report\" you're looking for. \n\nFor example:\n\n* **What is the Princess Everywhere?** Is this a fictional character, a historical figure, or something else entirely?\n* **What kind of journey are we talking about?** Is it a physical journey, a metaphorical one, or something else?\n* **What information do you want in the report?**  Do you want details about her travels, her thoughts and feelings, or something else?\n\n\nOnce I have this information, I can give you a helpful and concise response.",
+      "This passage describes how the woman being discussed is deeply respected and admired by everyone, making her feel like a queen. This admiration stems from her historical significance and connection to France, where she experienced hardship before moving to England.",
+      "The woman instilled in her daughter a love for their adopted country, based on the positive experiences they'd had there and the promising opportunities it offered."
+    ]
+  },
+  "hybrid_balanced": {
+    "config": {
+      "asr": "whisper-large-v3",
+      "llm": "gemma2:2b",
+      "description": "Cloud ASR + on-device LLM"
+    },
+    "n_samples": 200,
+    "e2e_latency_ms": {
+      "mean": 1119.83,
+      "std": 341.7,
+      "median": 1044.6,
+      "p95": 1650.64,
+      "p99": 1917.5
+    },
+    "asr_latency_ms": {
+      "mean": 464.11,
+      "std": 274.35
+    },
+    "llm_latency_ms": {
+      "mean": 455.73,
+      "std": 180.52
+    },
+    "sample_asr_outputs": [
+      "concord returned to its place amidst the tents",
+      "the english forwarded to the french baskets of flowers of which they had made a plentiful provision to greet the arrival of the young princess the french in return invited the english to a supper which was to be given the next day",
+      "congratulations were poured in upon the princess everywhere during her journey",
+      "from the respect paid her on all sides she seemed like a queen and from the adoration with which she was treated by two or three she appeared an object of worship  the queen-mother gave the french the most affectionate reception france was her native country and she had suffered too much unhappiness in england for england to have made her forget france",
+      "she taught her daughter then by her own affection for it that love for a country where they had both been hospitably received and where a brilliant future opened for them"
+    ],
+    "sample_llm_responses": [
+      "Concord was brought back to its original location within the camp.",
+      "The English brought flower baskets as a welcome gift for the French Princess's arrival. In return, the French hosted an evening meal for the English the following day.",
+      "The princess received widespread congratulations throughout her travels.",
+      "The passage describes how the Queen Mother was treated with immense respect and adoration, making her feel like a queen. This is further emphasized by France's affectionate reception of her, as she had suffered greatly in England and longed for her home country.",
+      "The woman instilled in her daughter a love for their adopted country through her own positive experiences there."
+    ]
+  },
+  "pavo_adaptive": {
+    "description": "PAVO adaptive routing using real measurements",
+    "n_samples": 200,
+    "e2e_latency_ms": {
+      "mean": 1148.69,
+      "std": 182.33,
+      "median": 1130.74,
+      "p95": 1453.37
+    },
+    "config_distribution": {
+      "hybrid_balanced": 112,
+      "cloud_premium": 80,
+      "ondevice_fast": 8
+    },
+    "config_distribution_pct": {
+      "hybrid_balanced": 56.0,
+      "cloud_premium": 40.0,
+      "ondevice_fast": 4.0
+    }
+  }
+}

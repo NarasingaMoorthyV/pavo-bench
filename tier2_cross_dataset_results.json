@@ -1,0 +1,64 @@
+{
+  "whisper-large-v3_librispeech": {
+    "model": "whisper-large-v3",
+    "dataset": "librispeech",
+    "n_samples": 200,
+    "wer": 5.77,
+    "mean_latency_ms": 825.16,
+    "std_latency_ms": 420.98
+  },
+  "whisper-large-v3_fleurs": {
+    "model": "whisper-large-v3",
+    "dataset": "fleurs",
+    "n_samples": 200,
+    "wer": 14.92,
+    "mean_latency_ms": 787.6,
+    "std_latency_ms": 182.0
+  },
+  "whisper-tiny_librispeech": {
+    "model": "whisper-tiny",
+    "dataset": "librispeech",
+    "n_samples": 200,
+    "wer": 18.54,
+    "mean_latency_ms": 438.46,
+    "std_latency_ms": 198.32
+  },
+  "whisper-tiny_fleurs": {
+    "model": "whisper-tiny",
+    "dataset": "fleurs",
+    "n_samples": 200,
+    "wer": 21.25,
+    "mean_latency_ms": 424.11,
+    "std_latency_ms": 129.55
+  },
+  "coupling_analysis": {
+    "whisper-large-v3_librispeech": {
+      "model": "whisper-large-v3",
+      "dataset": "librispeech",
+      "wer": 5.77,
+      "coupling_triggered": true,
+      "routing_recommendation": "cloud_llm_only"
+    },
+    "whisper-tiny_librispeech": {
+      "model": "whisper-tiny",
+      "dataset": "librispeech",
+      "wer": 18.54,
+      "coupling_triggered": true,
+      "routing_recommendation": "cloud_llm_only"
+    },
+    "whisper-large-v3_fleurs": {
+      "model": "whisper-large-v3",
+      "dataset": "fleurs",
+      "wer": 14.92,
+      "coupling_triggered": true,
+      "routing_recommendation": "cloud_llm_only"
+    },
+    "whisper-tiny_fleurs": {
+      "model": "whisper-tiny",
+      "dataset": "fleurs",
+      "wer": 21.25,
+      "coupling_triggered": true,
+      "routing_recommendation": "cloud_llm_only"
+    }
+  }
+}

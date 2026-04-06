@@ -1,0 +1,200 @@
+{
+  "experiment": "Coupling Constraint Validation",
+  "model": "llama3.1:8b",
+  "n_queries_per_wer": 10,
+  "wer_levels_tested": [
+    0,
+    1,
+    2,
+    3,
+    5,
+    8,
+    10,
+    15,
+    20
+  ],
+  "results": {
+    "wer_0": {
+      "wer_pct": 0,
+      "mean_quality": 0.9578,
+      "std_quality": 0.1268,
+      "n_queries": 10,
+      "quality_scores": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.5775,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "degradation_from_clean": 0.0,
+      "degradation_pct": 0.0
+    },
+    "wer_1": {
+      "wer_pct": 1,
+      "mean_quality": 1.0,
+      "std_quality": 0.0,
+      "n_queries": 10,
+      "quality_scores": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "degradation_from_clean": -0.0422,
+      "degradation_pct": -4.41
+    },
+    "wer_2": {
+      "wer_pct": 2,
+      "mean_quality": 0.9817,
+      "std_quality": 0.0548,
+      "n_queries": 10,
+      "quality_scores": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.8175,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "degradation_from_clean": -0.0239,
+      "degradation_pct": -2.5
+    },
+    "wer_3": {
+      "wer_pct": 3,
+      "mean_quality": 0.9828,
+      "std_quality": 0.0517,
+      "n_queries": 10,
+      "quality_scores": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.8275,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "degradation_from_clean": -0.025,
+      "degradation_pct": -2.61
+    },
+    "wer_5": {
+      "wer_pct": 5,
+      "mean_quality": 1.0,
+      "std_quality": 0.0,
+      "n_queries": 10,
+      "quality_scores": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "degradation_from_clean": -0.0422,
+      "degradation_pct": -4.41
+    },
+    "wer_8": {
+      "wer_pct": 8,
+      "mean_quality": 1.0,
+      "std_quality": 0.0,
+      "n_queries": 10,
+      "quality_scores": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "degradation_from_clean": -0.0422,
+      "degradation_pct": -4.41
+    },
+    "wer_10": {
+      "wer_pct": 10,
+      "mean_quality": 1.0,
+      "std_quality": 0.0,
+      "n_queries": 10,
+      "quality_scores": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "degradation_from_clean": -0.0422,
+      "degradation_pct": -4.41
+    },
+    "wer_15": {
+      "wer_pct": 15,
+      "mean_quality": 1.0,
+      "std_quality": 0.0,
+      "n_queries": 10,
+      "quality_scores": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "degradation_from_clean": -0.0422,
+      "degradation_pct": -4.41
+    },
+    "wer_20": {
+      "wer_pct": 20,
+      "mean_quality": 0.9248,
+      "std_quality": 0.1604,
+      "n_queries": 10,
+      "quality_scores": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.7475,
+        0.5,
+        1.0,
+        1.0
+      ],
+      "degradation_from_clean": 0.033,
+      "degradation_pct": 3.45
+    }
+  },
+  "critical_wer_threshold": null,
+  "conclusion": "No critical threshold found"
+}

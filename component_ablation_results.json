@@ -1,0 +1,201 @@
+{
+  "PAVO-Full": {
+    "latency_ms": {
+      "mean": 2276.96,
+      "std": 27.68
+    },
+    "quality": {
+      "mean": 0.827,
+      "std": 0.0011
+    },
+    "cost_usd": {
+      "mean": 0.01867,
+      "std": 8.3e-05
+    },
+    "energy_mj": {
+      "mean": 27.59,
+      "std": 1.91
+    },
+    "coupling_violations": {
+      "mean": 0.0,
+      "per_1000": 0.0
+    },
+    "infeasible_pct": 0.0
+  },
+  "PAVO-NoCoupling": {
+    "latency_ms": {
+      "mean": 1316.8,
+      "std": 7.08
+    },
+    "quality": {
+      "mean": 0.7329,
+      "std": 0.0018
+    },
+    "cost_usd": {
+      "mean": 0.011581,
+      "std": 0.000157
+    },
+    "energy_mj": {
+      "mean": 62.04,
+      "std": 0.89
+    },
+    "coupling_violations": {
+      "mean": 494.6,
+      "per_1000": 494.6
+    },
+    "infeasible_pct": 0.0
+  },
+  "PAVO-NoAdaptive": {
+    "latency_ms": {
+      "mean": 2331.92,
+      "std": 27.42
+    },
+    "quality": {
+      "mean": 0.8313,
+      "std": 0.0007
+    },
+    "cost_usd": {
+      "mean": 0.018924,
+      "std": 2.9e-05
+    },
+    "energy_mj": {
+      "mean": 21.75,
+      "std": 0.66
+    },
+    "coupling_violations": {
+      "mean": 0.0,
+      "per_1000": 0.0
+    },
+    "infeasible_pct": 0.0
+  },
+  "PAVO-NoRouting (Cheapest)": {
+    "latency_ms": {
+      "mean": 1444.92,
+      "std": 12.16
+    },
+    "quality": {
+      "mean": 0.7144,
+      "std": 0.0003
+    },
+    "cost_usd": {
+      "mean": 0.0,
+      "std": 0.0
+    },
+    "energy_mj": {
+      "mean": 455.0,
+      "std": 0.0
+    },
+    "coupling_violations": {
+      "mean": 0.0,
+      "per_1000": 0.0
+    },
+    "infeasible_pct": 0.0
+  },
+  "PAVO-NoCost (MaxQuality)": {
+    "latency_ms": {
+      "mean": 2630.7,
+      "std": 23.63
+    },
+    "quality": {
+      "mean": 0.8921,
+      "std": 0.0001
+    },
+    "cost_usd": {
+      "mean": 0.024,
+      "std": 0.0
+    },
+    "energy_mj": {
+      "mean": 165.0,
+      "std": 0.0
+    },
+    "coupling_violations": {
+      "mean": 0.0,
+      "per_1000": 0.0
+    },
+    "infeasible_pct": 0.0
+  },
+  "Always-Cloud": {
+    "latency_ms": {
+      "mean": 2670.7,
+      "std": 23.63
+    },
+    "quality": {
+      "mean": 0.8746,
+      "std": 0.0002
+    },
+    "cost_usd": {
+      "mean": 0.025,
+      "std": 0.0
+    },
+    "energy_mj": {
+      "mean": 185.0,
+      "std": 0.0
+    },
+    "coupling_violations": {
+      "mean": 0.0,
+      "per_1000": 0.0
+    },
+    "infeasible_pct": 0.0
+  },
+  "Always-OnDevice": {
+    "latency_ms": {
+      "mean": 1400.26,
+      "std": 11.39
+    },
+    "quality": {
+      "mean": 0.6276,
+      "std": 0.0
+    },
+    "cost_usd": {
+      "mean": 0.005,
+      "std": 0.0
+    },
+    "energy_mj": {
+      "mean": 365.0,
+      "std": 0.0
+    },
+    "coupling_violations": {
+      "mean": 0.0,
+      "per_1000": 0.0
+    },
+    "infeasible_pct": 47.9
+  },
+  "impact_analysis": {
+    "PAVO-NoCoupling": {
+      "latency_change_pct": -42.17,
+      "quality_change_pct": -11.38,
+      "cost_change_pct": -37.97,
+      "coupling_violations_delta": 494.6
+    },
+    "PAVO-NoAdaptive": {
+      "latency_change_pct": 2.41,
+      "quality_change_pct": 0.52,
+      "cost_change_pct": 1.36,
+      "coupling_violations_delta": 0.0
+    },
+    "PAVO-NoRouting (Cheapest)": {
+      "latency_change_pct": -36.54,
+      "quality_change_pct": -13.62,
+      "cost_change_pct": -100.0,
+      "coupling_violations_delta": 0.0
+    },
+    "PAVO-NoCost (MaxQuality)": {
+      "latency_change_pct": 15.54,
+      "quality_change_pct": 7.87,
+      "cost_change_pct": 28.55,
+      "coupling_violations_delta": 0.0
+    },
+    "Always-Cloud": {
+      "latency_change_pct": 17.29,
+      "quality_change_pct": 5.76,
+      "cost_change_pct": 33.9,
+      "coupling_violations_delta": 0.0
+    },
+    "Always-OnDevice": {
+      "latency_change_pct": -38.5,
+      "quality_change_pct": -24.11,
+      "cost_change_pct": -73.22,
+      "coupling_violations_delta": 0.0
+    }
+  }
+}

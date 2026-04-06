@@ -1,0 +1,60 @@
+{
+  "gemma2:2b": {
+    "description": "gemma2:2b model",
+    "benchmarks": {
+      "simple": {
+        "query": "What time is it?",
+        "latency_ms_mean": 1024.5,
+        "latency_ms_std": 909.01,
+        "tokens_generated": 27,
+        "tokens_per_second": 26.35,
+        "suitable_for_realtime": true
+      },
+      "medium": {
+        "query": "Explain how photosynthesis works in 3 sentences.",
+        "latency_ms_mean": 743.18,
+        "latency_ms_std": 38.4,
+        "tokens_generated": 58,
+        "tokens_per_second": 78.04,
+        "suitable_for_realtime": true
+      },
+      "complex": {
+        "query": "Write a detailed comparison of renewable energy sources including solar, wind, and hydroelectric power.",
+        "latency_ms_mean": 6534.02,
+        "latency_ms_std": 532.99,
+        "tokens_generated": 598,
+        "tokens_per_second": 91.52,
+        "suitable_for_realtime": false
+      }
+    }
+  },
+  "llama3.1:8b": {
+    "description": "llama3.1:8b model",
+    "benchmarks": {
+      "simple": {
+        "query": "What time is it?",
+        "latency_ms_mean": 1023.05,
+        "latency_ms_std": 1339.35,
+        "tokens_generated": 8,
+        "tokens_per_second": 7.82,
+        "suitable_for_realtime": true
+      },
+      "medium": {
+        "query": "Explain how photosynthesis works in 3 sentences.",
+        "latency_ms_mean": 1329.08,
+        "latency_ms_std": 91.18,
+        "tokens_generated": 102,
+        "tokens_per_second": 76.74,
+        "suitable_for_realtime": true
+      },
+      "complex": {
+        "query": "Write a detailed comparison of renewable energy sources including solar, wind, and hydroelectric power.",
+        "latency_ms_mean": 9671.43,
+        "latency_ms_std": 1213.5,
+        "tokens_generated": 652,
+        "tokens_per_second": 67.42,
+        "suitable_for_realtime": false
+      }
+    }
+  }
+}
