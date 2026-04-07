@@ -1,0 +1,58 @@
+{
+  "PAVO-Full (W-lg+Llama)": {
+    "mean_latency_ms": 1091.4,
+    "p95_latency_ms": 1251.0,
+    "bertscore_deberta": 0.5327,
+    "bertscore_roberta": 0.8143,
+    "bertscore_distilbert": 0.7694,
+    "n_samples": 200
+  },
+  "-Coupling": {
+    "mean_latency_ms": 1113.7,
+    "p95_latency_ms": 1248.0,
+    "bertscore_deberta": 0.5327,
+    "bertscore_roberta": 0.8151,
+    "bertscore_distilbert": 0.7707,
+    "n_samples": 200
+  },
+  "Always-Cloud (W-lg+Llama)": {
+    "mean_latency_ms": 1056.0,
+    "p95_latency_ms": 1232.1,
+    "bertscore_deberta": 0.533,
+    "bertscore_roberta": 0.814,
+    "bertscore_distilbert": 0.772,
+    "n_samples": 200
+  },
+  "Hybrid (W-lg+Gemma)": {
+    "mean_latency_ms": 892.7,
+    "p95_latency_ms": 1116.3,
+    "bertscore_deberta": 0.533,
+    "bertscore_roberta": 0.8164,
+    "bertscore_distilbert": 0.7697,
+    "n_samples": 200
+  },
+  "Always-OnDevice (W-tiny+Gemma)": {
+    "mean_latency_ms": 906.6,
+    "p95_latency_ms": 1063.7,
+    "bertscore_deberta": 0.5218,
+    "bertscore_roberta": 0.8124,
+    "bertscore_distilbert": 0.7619,
+    "n_samples": 200
+  },
+  "-Routing (cheapest)": {
+    "mean_latency_ms": 874.3,
+    "p95_latency_ms": 996.0,
+    "bertscore_deberta": 0.5192,
+    "bertscore_roberta": 0.8121,
+    "bertscore_distilbert": 0.7588,
+    "n_samples": 200
+  },
+  "PAVO Adaptive": {
+    "mean_latency_ms": 818.2,
+    "p95_latency_ms": 960.4,
+    "bertscore_deberta": 0.5349,
+    "bertscore_roberta": 0.8148,
+    "bertscore_distilbert": 0.772,
+    "n_samples": 200
+  }
+}

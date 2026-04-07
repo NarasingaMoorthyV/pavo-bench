@@ -1,0 +1,32 @@
+{
+  "whisper-large-v3+llama3.1:8b": {
+    "asr_wer_pct": 99.57,
+    "bertscore_deberta": 0.527,
+    "n_samples": 100
+  },
+  "whisper-large-v3+gemma2:2b": {
+    "asr_wer_pct": 99.57,
+    "bertscore_deberta": 0.5284,
+    "n_samples": 100
+  },
+  "whisper-large-v3+mistral:7b": {
+    "asr_wer_pct": 99.57,
+    "bertscore_deberta": 0.5571,
+    "n_samples": 100
+  },
+  "whisper-tiny+llama3.1:8b": {
+    "asr_wer_pct": 98.82,
+    "bertscore_deberta": 0.5219,
+    "n_samples": 100
+  },
+  "whisper-tiny+gemma2:2b": {
+    "asr_wer_pct": 98.82,
+    "bertscore_deberta": 0.5226,
+    "n_samples": 100
+  },
+  "whisper-tiny+mistral:7b": {
+    "asr_wer_pct": 98.82,
+    "bertscore_deberta": 0.5429,
+    "n_samples": 100
+  }
+}

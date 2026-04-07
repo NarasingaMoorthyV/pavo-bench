@@ -1,0 +1,9 @@
+{
+  "n_samples": 100,
+  "mean_e2e_ms": 951.5,
+  "p95_e2e_ms": 1197.8,
+  "mean_asr_ms": 347.8,
+  "mean_llm_ms": 603.7,
+  "bertscore_deberta": 0.5287,
+  "bertscore_roberta": 0.818
+}

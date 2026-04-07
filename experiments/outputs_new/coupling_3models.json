@@ -1,0 +1,143 @@
+{
+  "llama3.1:8b": {
+    "0": {
+      "exact_match": 0.95,
+      "quality_score": 0.876,
+      "n": 200
+    },
+    "1": {
+      "exact_match": 0.95,
+      "quality_score": 0.869,
+      "n": 200
+    },
+    "2": {
+      "exact_match": 0.95,
+      "quality_score": 0.874,
+      "n": 200
+    },
+    "3": {
+      "exact_match": 0.945,
+      "quality_score": 0.875,
+      "n": 200
+    },
+    "5": {
+      "exact_match": 0.95,
+      "quality_score": 0.871,
+      "n": 200
+    },
+    "8": {
+      "exact_match": 0.95,
+      "quality_score": 0.872,
+      "n": 200
+    },
+    "10": {
+      "exact_match": 0.95,
+      "quality_score": 0.87,
+      "n": 200
+    },
+    "15": {
+      "exact_match": 0.835,
+      "quality_score": 0.796,
+      "n": 200
+    },
+    "20": {
+      "exact_match": 0.75,
+      "quality_score": 0.756,
+      "n": 200
+    }
+  },
+  "gemma2:2b": {
+    "0": {
+      "exact_match": 0.935,
+      "quality_score": 0.865,
+      "n": 200
+    },
+    "1": {
+      "exact_match": 0.94,
+      "quality_score": 0.866,
+      "n": 200
+    },
+    "2": {
+      "exact_match": 0.92,
+      "quality_score": 0.854,
+      "n": 200
+    },
+    "3": {
+      "exact_match": 0.935,
+      "quality_score": 0.862,
+      "n": 200
+    },
+    "5": {
+      "exact_match": 0.95,
+      "quality_score": 0.87,
+      "n": 200
+    },
+    "8": {
+      "exact_match": 0.945,
+      "quality_score": 0.874,
+      "n": 200
+    },
+    "10": {
+      "exact_match": 0.94,
+      "quality_score": 0.869,
+      "n": 200
+    },
+    "15": {
+      "exact_match": 0.855,
+      "quality_score": 0.808,
+      "n": 200
+    },
+    "20": {
+      "exact_match": 0.81,
+      "quality_score": 0.78,
+      "n": 200
+    }
+  },
+  "mistral:7b": {
+    "0": {
+      "exact_match": 0.935,
+      "quality_score": 0.872,
+      "n": 200
+    },
+    "1": {
+      "exact_match": 0.94,
+      "quality_score": 0.876,
+      "n": 200
+    },
+    "2": {
+      "exact_match": 0.945,
+      "quality_score": 0.884,
+      "n": 200
+    },
+    "3": {
+      "exact_match": 0.935,
+      "quality_score": 0.872,
+      "n": 200
+    },
+    "5": {
+      "exact_match": 0.925,
+      "quality_score": 0.869,
+      "n": 200
+    },
+    "8": {
+      "exact_match": 0.925,
+      "quality_score": 0.869,
+      "n": 200
+    },
+    "10": {
+      "exact_match": 0.935,
+      "quality_score": 0.875,
+      "n": 200
+    },
+    "15": {
+      "exact_match": 0.87,
+      "quality_score": 0.825,
+      "n": 200
+    },
+    "20": {
+      "exact_match": 0.835,
+      "quality_score": 0.814,
+      "n": 200
+    }
+  }
+}
