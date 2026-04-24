@@ -1,0 +1,26 @@
+name: Feature / experiment request
+description: Propose a new experiment, extension, or API change.
+title: "[Feat] <summary>"
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation
+      description: What question does this experiment or feature answer that isn't answered today?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: What would be built, and how.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: What other approaches did you consider, and why did you prefer this one?

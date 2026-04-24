@@ -1,0 +1,45 @@
+cff-version: 1.2.0
+message: "If you use PAVO-Bench or the meta-controller in your research, please cite it as below."
+title: "PAVO: Pipeline-Aware Voice Orchestration with Demand-Conditioned Inference Routing"
+abstract: >
+  PAVO treats the ASR-LLM-TTS voice pipeline as a jointly optimizable inference graph
+  with demand-conditioned routing. An 85,041-parameter meta-controller, trained with
+  multi-objective PPO in 106 seconds, cuts P95 end-to-end latency by 12%
+  (p = 2x10^-6) and per-turn energy by 71% vs a fixed-cloud baseline on a
+  50,000-turn benchmark, while characterizing an inter-stage coupling cliff in
+  which upstream ASR word-error rate bounds feasible downstream LLM options.
+type: software
+license: CC-BY-4.0
+url: "https://github.com/vnmoorthy/pavo-bench"
+repository-code: "https://github.com/vnmoorthy/pavo-bench"
+repository-artifact: "https://huggingface.co/datasets/vnmoorthy/pavo-bench"
+keywords:
+  - voice-pipeline
+  - asr
+  - llm
+  - tts
+  - inference-routing
+  - edge-ai
+  - latency
+  - reinforcement-learning
+  - benchmark
+authors:
+  - family-names: VeiluKanthaPerumal
+    given-names: NarasingaMoorthy
+    affiliation: University of Pennsylvania
+    email: moorthyv@sas.upenn.edu
+  - family-names: Imthathullah
+    given-names: Mohammed
+    affiliation: Google
+preferred-citation:
+  type: article
+  title: "PAVO: Pipeline-Aware Voice Orchestration with Demand-Conditioned Inference Routing"
+  authors:
+    - family-names: VeiluKanthaPerumal
+      given-names: NarasingaMoorthy
+      affiliation: University of Pennsylvania
+    - family-names: Imthathullah
+      given-names: Mohammed
+      affiliation: Google
+  journal: "Transactions on Machine Learning Research"
+  year: 2026

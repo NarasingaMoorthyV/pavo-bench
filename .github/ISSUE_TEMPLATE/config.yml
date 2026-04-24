@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Paper discussion
+    url: https://github.com/vnmoorthy/pavo-bench/discussions
+    about: For methodology discussion that isn't a bug or a reproduction report.
+  - name: Security issues
+    url: mailto:moorthyv@sas.upenn.edu
+    about: Report security issues privately.

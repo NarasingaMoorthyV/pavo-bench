@@ -1,0 +1,74 @@
+name: Reproduction report
+description: Report results from reproducing a PAVO-Bench experiment (success or failure).
+title: "[Repro] <tier / experiment name>"
+labels: ["reproduction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reproducing PAVO-Bench. These reports are the single most
+        valuable kind of issue for the project.
+
+  - type: dropdown
+    id: tier
+    attributes:
+      label: Which tier did you reproduce?
+      options:
+        - "Tier 1 - components (tier1_*.json)"
+        - "Tier 2 - integration (tier2_*.json)"
+        - "Tier 3 - scale (tier3_*.jsonl, tier3_*.json)"
+        - "Component ablation (component_ablation_results.json)"
+        - "PPO meta-controller training (experiments/outputs/meta_controller*.pt)"
+        - "Other / multiple"
+    validations:
+      required: true
+
+  - type: textarea
+    id: hardware
+    attributes:
+      label: Hardware
+      description: GPU model, driver, CUDA version, host OS, Python version.
+      placeholder: |
+        NVIDIA RTX 4090, driver 550.54.15, CUDA 12.4
+        Ubuntu 22.04, Python 3.11.7
+    validations:
+      required: true
+
+  - type: textarea
+    id: models
+    attributes:
+      label: Model tags
+      description: Output of `ollama list` for the LLMs you used, plus Whisper variant.
+    validations:
+      required: true
+
+  - type: textarea
+    id: command
+    attributes:
+      label: Command run
+      placeholder: |
+        python experiments/exp2_coupling_calibration.py
+    validations:
+      required: true
+
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed results
+      description: Paste the key numbers from your JSON output, or attach the JSON file.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected results (from this repo)
+      description: The corresponding numbers from the committed tier*.json you were comparing against.
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional notes
+      description: Anything surprising, any deviations from the published protocol, flaky tests, etc.

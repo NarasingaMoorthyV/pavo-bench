@@ -1,0 +1,74 @@
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  json-validity:
+    name: Validate all committed JSON
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Parse every JSON / JSONL file
+        shell: bash
+        run: |
+          set -euo pipefail
+          fail=0
+          while IFS= read -r f; do
+            echo "checking $f"
+            python -c "import json,sys; json.load(open(sys.argv[1]))" "$f" || { echo "BAD: $f"; fail=1; }
+          done < <(find . -name '*.json' -not -path './.git/*')
+
+          while IFS= read -r f; do
+            echo "checking (per-line) $f"
+            python - "$f" <<'PY' || fail=1
+          import json, sys
+          path = sys.argv[1]
+          bad = 0
+          with open(path, encoding='utf-8') as fh:
+              for i, line in enumerate(fh, 1):
+                  if not line.strip():
+                      continue
+                  try:
+                      json.loads(line)
+                  except Exception as e:
+                      print(f"  line {i}: {e}")
+                      bad += 1
+                      if bad >= 5:
+                          sys.exit(1)
+          sys.exit(1 if bad else 0)
+          PY
+          done < <(find . -name '*.jsonl' -not -path './.git/*')
+
+          exit $fail
+
+  python-lint:
+    name: Lint Python
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install ruff
+        run: pip install "ruff>=0.5"
+      - name: Run ruff (informational)
+        run: ruff check experiments/ scripts/ || true
+
+  citation-check:
+    name: CITATION.cff well-formed
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install cffconvert
+        run: pip install cffconvert
+      - name: Validate CITATION.cff
+        run: cffconvert --validate -i CITATION.cff
