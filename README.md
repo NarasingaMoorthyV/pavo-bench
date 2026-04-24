@@ -7,6 +7,7 @@
 [![Dataset](https://img.shields.io/badge/dataset-PAVO--Bench%2050K-orange)](https://huggingface.co/datasets/vnmoorthy/pavo-bench)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![CI](https://github.com/vnmoorthy/pavo-bench/actions/workflows/validate.yml/badge.svg)](https://github.com/vnmoorthy/pavo-bench/actions/workflows/validate.yml)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vnmoorthy/pavo-bench/blob/main/notebooks/quickstart.ipynb)
 
 PAVO treats the voice-assistant pipeline as a jointly optimizable inference graph. An **85,041-parameter** meta-controller, trained with multi-objective PPO in **106 seconds**, decides per turn whether to route each ASR → LLM → TTS call to a cloud or edge configuration. The empirical contribution is a characterization of **inter-stage coupling constraints** — quality dependencies where upstream ASR choices bound what downstream LLMs can recover from.
 
@@ -44,6 +45,31 @@ Most voice-stack work optimizes ASR, LLM, and TTS independently. In practice, ac
 
 ## Quickstart
 
+### Python API (CPU, no ollama needed — ~30 s)
+
+```bash
+pip install git+https://github.com/vnmoorthy/pavo-bench.git
+```
+
+```python
+from pavo_bench import (
+    load_dataset, AlwaysCloudRouter, AlwaysEdgeRouter, HybridRouter,
+    PretrainedPAVORouter, BaseRouter, benchmark_router,
+)
+
+turns = load_dataset(split="test")   # 10K test turns from HuggingFace
+pavo  = PretrainedPAVORouter.from_released()  # 85K-param trained router
+
+for R in [AlwaysCloudRouter(), AlwaysEdgeRouter(), HybridRouter(), pavo]:
+    r = benchmark_router(R, turns)
+    print(f"{r.router:<18s} P95={r.latency_ms_p95:>7.0f} ms   "
+          f"quality={r.quality_mean:.3f}   energy={r.energy_mj_mean:>6.1f} mJ")
+```
+
+Write your own router in five lines by subclassing `BaseRouter` and returning one of `"cloud_premium"`, `"ondevice_fast"`, or `"hybrid_balanced"` from `.route(turn)`. See [`notebooks/quickstart.ipynb`](notebooks/quickstart.ipynb) (runs on free-tier Colab) or [`BLOG.md`](BLOG.md) for a walkthrough.
+
+### Full reproduction (GPU + ollama)
+
 ```bash
 git clone https://github.com/vnmoorthy/pavo-bench.git
 cd pavo-bench
@@ -57,24 +83,6 @@ python experiments/exp1_e2e_pipeline.py          # End-to-end pipeline (Tier 2)
 python experiments/exp2_coupling_calibration.py  # Coupling cliff (Tier 1, 3,600 LLM calls)
 python experiments/exp3_train_ppo.py             # PPO meta-controller training (~106 s on A100)
 python experiments/exp4_real_ablation.py         # Component ablation with BERTScore
-```
-
-Load the benchmark dataset directly from HuggingFace:
-
-```python
-from huggingface_hub import hf_hub_download
-import json
-
-path = hf_hub_download(
-    repo_id="vnmoorthy/pavo-bench",
-    filename="tier3_50k_summary.json",
-    repo_type="dataset",
-)
-with open(path) as f:
-    summary = json.load(f)
-print(summary["total_samples"], "turns -",
-      summary["train_samples"], "train /",
-      summary["test_samples"], "test")
 ```
 
 Training-only reproduction runs in **~2 minutes** on a single A100. A full reproduction of all tiers takes roughly half a day on an H100 including ollama warm-up and LibriSpeech downloads.

@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pavo-bench"
+version = "1.0.0"
+description = "PAVO-Bench: a 50K-turn benchmark + an 85K-param router for ASR-LLM-TTS voice pipelines."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "CC-BY-4.0" }
+keywords = [
+    "voice-pipeline", "asr", "llm", "tts", "inference-routing",
+    "edge-ai", "benchmark", "reinforcement-learning",
+]
+authors = [
+    { name = "NarasingaMoorthy VeiluKanthaPerumal", email = "moorthyv@sas.upenn.edu" },
+    { name = "Mohammed Imthathullah" },
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Science/Research",
+    "License :: Other/Proprietary License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "numpy>=1.26",
+    "torch>=2.1",
+    "huggingface_hub>=0.23",
+]
+
+[project.optional-dependencies]
+full = [
+    "openai-whisper>=20240930",
+    "faster-whisper>=1.0",
+    "bert-score>=0.3.13",
+    "datasets>=2.19",
+]
+dev = [
+    "ruff>=0.5",
+    "pytest>=8.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/vnmoorthy/pavo-bench"
+Paper = "https://github.com/vnmoorthy/pavo-bench/tree/main/paper"
+Dataset = "https://huggingface.co/datasets/vnmoorthy/pavo-bench"
+Issues = "https://github.com/vnmoorthy/pavo-bench/issues"
+
+[tool.setuptools]
+packages = ["pavo_bench"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
