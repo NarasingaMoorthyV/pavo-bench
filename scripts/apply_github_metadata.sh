@@ -11,7 +11,7 @@ curl -fsS -X PATCH \
   -H "Accept: application/vnd.github+json" \
   "https://api.github.com/repos/$REPO" \
   -d '{
-    "description":"A 50K-turn voice pipeline benchmark and an 85K-param meta-controller that cuts P95 latency 12% and energy 71% vs fixed cloud. TMLR 2026.",
+    "description":"A 50K-turn voice pipeline benchmark and an 85K-param meta-controller that cuts P95 latency 10.3% and energy 71% vs fixed cloud. TMLR 2026.",
     "homepage":"https://huggingface.co/datasets/vnmoorthy/pavo-bench",
     "has_issues":true,
     "has_wiki":false
