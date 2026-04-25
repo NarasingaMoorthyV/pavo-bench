@@ -96,9 +96,10 @@ In PAVO we train an 85,041-parameter MLP to do this. Input is a 12-dim turn stat
 
 On a 50,000-turn benchmark, against a fixed-cloud baseline:
 
-- **−12% P95 latency** (p = 2×10⁻⁶)
-- **−34% median latency**
-- **−71% energy per turn**
+- **−10.3% P95 tail compression** (−167 ms on H100 / 200 LibriSpeech samples; p = 2×10⁻⁶)
+- **−34% median latency** (50K-turn benchmark)
+- **−71% energy per turn** (50K-turn benchmark)
+- **7.1% → 0.9% coherence-failure rate** (7.9× reduction via hard-constraint masking, +110 ms median latency cost)
 - Quality parity on non-coupling-violating turns
 
 ## Reproduce it

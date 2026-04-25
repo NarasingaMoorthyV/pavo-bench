@@ -4,10 +4,12 @@ title: "PAVO: Pipeline-Aware Voice Orchestration with Demand-Conditioned Inferen
 abstract: >
   PAVO treats the ASR-LLM-TTS voice pipeline as a jointly optimizable inference graph
   with demand-conditioned routing. An 85,041-parameter meta-controller, trained with
-  multi-objective PPO in 106 seconds, cuts P95 end-to-end latency by 12%
-  (p = 2x10^-6) and per-turn energy by 71% vs a fixed-cloud baseline on a
-  50,000-turn benchmark, while characterizing an inter-stage coupling cliff in
-  which upstream ASR word-error rate bounds feasible downstream LLM options.
+  multi-objective PPO in 106 seconds, cuts P95 end-to-end latency by 10.3%
+  (p = 2x10^-6 on H100, 200 LibriSpeech samples) and per-turn energy by 71% vs a
+  fixed-cloud baseline on a 50,000-turn benchmark. Hard-constraint masking on the
+  inter-stage coupling structure (validated across n=5,430 measurements on three
+  LLM families and two hardware platforms) reduces coherence-failure rate from
+  7.1% to 0.9% (7.9x), at +110 ms median latency cost.
 type: software
 license: CC-BY-4.0
 url: "https://github.com/vnmoorthy/pavo-bench"

@@ -79,7 +79,7 @@ ax.text(64, 510, "Pipeline-Aware Voice Orchestration · TMLR 2026", fontsize=22,
 def stat(xp, big, small, color):
     ax.text(xp, 320, big,   fontsize=72, color=color, fontweight="bold", family="DejaVu Sans")
     ax.text(xp, 270, small, fontsize=18, color="#c9d1d9", family="DejaVu Sans")
-stat(64,  "-12%",  "P95 latency vs fixed cloud (p = 2e-6)",        "#58a6ff")
+stat(64,  "-10.3%",  "P95 latency, H100 (p = 2e-6)",                  "#58a6ff")
 stat(464, "-71%",  "energy per turn",                               "#3fb950")
 stat(864, "85 K",  "meta-controller params  ·  106 s training",     "#d29922")
 ax.text(64, 80, "50,000-turn benchmark  ·  A100 / H100 + Apple M3  ·  code + paper + dataset",
