@@ -21,15 +21,16 @@ Measured on NVIDIA A100-SXM4-40GB and H100 (Lambda Labs), with Apple M3 8 GB for
 
 | Metric | vs fixed-cloud baseline | Significance |
 |---|---|---|
-| P95 end-to-end latency | **−12%** | p = 2×10⁻⁶ |
+| P95 end-to-end latency (H100, LibriSpeech) | **−10.3%** (−167 ms) | p = 2×10⁻⁶ |
 | Median latency | **−34%** | |
 | Energy per turn | **−71%** | |
+| Coherence-failure rate | **7.1% → 0.9%** (7.9× reduction) | hard-constraint masking, +110 ms median cost |
 | Meta-controller size | 85,041 parameters | — |
 | Meta-controller training | 106 seconds | — |
 
 ![Coupling cliff — downstream LLM quality vs upstream ASR WER](figures/coupling_cliff.png)
 
-The **coupling cliff** is the finding that motivates the router: Gemma2 2B mean quality drops from **0.825 → 0.585** as ASR WER crosses 2% (n=200 per WER level). Downstream LLM performance is not independent of upstream ASR configuration, so a router that ignores upstream state will make the wrong choice.
+The paper characterizes a two-regime coupling structure: a **sharp factual-accuracy cliff** at low WER and **gradual semantic degradation** above it. Gemma2 2B mean quality drops from **0.825 → 0.585** as ASR WER crosses 2% (n=200 per WER level). Downstream LLM performance is not independent of upstream ASR configuration, so a router that ignores upstream state will make the wrong choice.
 
 ---
 
@@ -39,7 +40,7 @@ Most voice-stack work optimizes ASR, LLM, and TTS independently. In practice, ac
 
 1. **PAVO-Bench** — a 50K-turn voice interaction benchmark with complexity labels (40K train / 10K test), released on HuggingFace.
 2. **A trained, tiny router** — 85K-parameter MLP that beats fixed-cloud on latency and energy while matching quality on coupling-safe turns.
-3. **A reproducible coupling calibration** — 3,600 LLM calls across WER levels so you can reproduce the coupling cliff on your own models.
+3. **A reproducible coupling calibration** — 5,430 calibration measurements across two hardware platforms (H100, M3) and three LLM families (Llama 3.1 8B, Mistral 7B, Gemma2 2B) so you can reproduce the coupling cliff on your own model pair.
 
 ---
 
@@ -80,7 +81,7 @@ python experiments/run_all_experiments.py --hf-token "$HF_TOKEN"
 
 # Or run experiments individually
 python experiments/exp1_e2e_pipeline.py          # End-to-end pipeline (Tier 2)
-python experiments/exp2_coupling_calibration.py  # Coupling cliff (Tier 1, 3,600 LLM calls)
+python experiments/exp2_coupling_calibration.py  # Coupling cliff (Tier 1, 5,430 measurements across H100/M3 × Llama/Mistral/Gemma)
 python experiments/exp3_train_ppo.py             # PPO meta-controller training (~106 s on A100)
 python experiments/exp4_real_ablation.py         # Component ablation with BERTScore
 ```
@@ -96,7 +97,7 @@ experiments/
   setup.sh                     Install deps, ollama, and pull models
   run_all_experiments.py       Master runner (argparse: --hf-token, --skip-*)
   exp1_e2e_pipeline.py         End-to-end pipeline (Whisper + LLM on LibriSpeech)
-  exp2_coupling_calibration.py Coupling cliff: n=200 per WER level, 3,600 LLM calls
+  exp2_coupling_calibration.py Coupling cliff: n=200 per WER, 5,430 measurements (H100/M3 × Llama/Mistral/Gemma)
   exp3_train_ppo.py            PPO meta-controller training (85K params, 106 s)
   exp4_fix.py                  Component ablation (fixed quality heuristic)
   exp4_real_ablation.py        Component ablation with BERTScore
